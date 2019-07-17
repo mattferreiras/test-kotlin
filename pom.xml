@@ -18,6 +18,7 @@
         <apache.commons-lang3.version>3.9</apache.commons-lang3.version>
         <jackson.module.kotlin.version>2.9.8</jackson.module.kotlin.version>
         <log4j.version>2.11.2</log4j.version>
+        <postgres.version>42.2.6</postgres.version>
     </properties>
 
     <dependencyManagement>
@@ -93,10 +94,15 @@
             <version>${apache.commons-lang3.version}</version>
         </dependency>
 
-        <!-- h2 Libs -->
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgres.version}</version>
         </dependency>
 
     </dependencies>
